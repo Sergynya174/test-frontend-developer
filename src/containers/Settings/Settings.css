@@ -1,0 +1,44 @@
+.settings-description{
+  max-width: 1879px;
+  height: 0;
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #F37D73;
+  margin: 30px 20px 35px;
+  transition: height 1.7s ease;
+}
+
+.settings-fade-in {
+    animation: profiles-fade-in 1.7s forwards;
+}
+  
+.settings-fade-out {
+    animation: profiles-fade-out 1.7s forwards;
+}
+
+.expanded {
+  height: 865px;
+}
+
+@keyframes settings-fade-in {
+    0%{
+      opacity: 0;
+      transform: translateX(0);
+    }
+    100%{
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+    
+@keyframes settings-fade-out {
+    0%{
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100%{
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+}

@@ -1,0 +1,204 @@
+.card{
+    width: 100%;
+    box-shadow: 0px 0px 10px 0px rgba(38, 67, 84, 0.1);
+    min-height: 150px;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: space-between;
+    display: flex;
+}
+
+.card-container{
+    border: 1px solid transparent; 
+    border-image-source: linear-gradient(180deg, rgba(115, 195, 243, 0) 0%, rgba(115, 195, 243, 0.7) 48.95%, rgba(115, 195, 243, 0) 98.93%);
+    border-image-slice: 0 1 0 0;
+    border-image-repeat: stretch;
+    width: 296px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.card-container-info{
+    border: 1px solid transparent; 
+    border-image-source: linear-gradient(180deg, rgba(115, 195, 243, 0) 0%, rgba(115, 195, 243, 0.7) 48.95%, rgba(115, 195, 243, 0) 98.93%);
+    border-image-slice: 0 1 0 0;
+    border-image-repeat: stretch;
+    width: 296px;
+    padding: 15px;
+    position: relative;
+    margin-right: 30px;
+    transition: all 0.5s ease;
+}
+
+.card-container:last-of-type{
+    border-image-slice: 0 0 0 1;
+}
+
+.card-button{
+    color: #BDD7E7;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    height: 37px;
+    transition: all 0.5s ease;
+}
+
+.card-container-info-active{
+    border: 1px solid transparent; 
+    border-image-source: linear-gradient(180deg, rgba(115, 195, 243, 0) 0%, rgba(115, 195, 243, 0.7) 48.95%, rgba(115, 195, 243, 0) 98.93%);
+    border-image-slice: 0 1 0 0;
+    border-image-repeat: stretch;
+    width: 296px;
+    padding: 15px;
+    position: relative;
+    margin-right: 30px;
+    transition: all 0.5s ease;
+}
+
+.card-container-active{
+    width: 296px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.card-button-active{
+    color: #BDD7E7;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    height: 37px;
+    transition: all 0.5s ease;
+}
+
+.card:hover .card-button{
+    color: #F37D73;
+}
+
+.card:hover .card-container{
+    border-image-source: linear-gradient(180deg, rgba(243, 125, 115, 0) 0%, rgba(243, 125, 115, 0.7) 48.95%, rgba(243, 125, 115, 0) 98.93%);
+}
+
+.card:hover .card-container-info{
+    border-image-source: linear-gradient(180deg, rgba(243, 125, 115, 0) 0%, rgba(243, 125, 115, 0.7) 48.95%, rgba(243, 125, 115, 0) 98.93%);
+}
+
+.card-title{
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 600;
+    color: #264354;
+    margin-bottom: 5px;
+    min-height: 36px;
+}
+
+.button-container{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 37px);
+}
+
+.button-bottom{
+    width: 37px;
+    height: 37px;
+    box-shadow: 0px 0px 4px 0px #12409A1A;
+    background-image: url("../../image/eye.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+}
+
+.button-bottom:hover{
+    background-color: #73C3F3B2;
+}
+
+.button-bottom-tsaetok{
+    background-image: url("../../image/tsaetok.svg");
+}
+
+.card-arrow-button{
+    background-color: #F37D73;
+    width: 30px;
+    height: 100%;
+    color: #FFFFFF;
+    opacity: 1;
+    animation: fadeInButton 0.5s ease;
+}
+
+.card-burger-button{
+    background-color: #F37D73;
+    width: 30px;
+    height: 100%;
+    border-radius: 0 5px 5px 0;
+    color: #FFFFFF;
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    animation: fadeOutButton 0.5s ease;
+}
+
+.card:hover .card-burger-button{
+    visibility: visible;
+    animation: fadeInButton 0.5s ease;
+    opacity: 1;
+}
+
+.burger-line {
+    width: 1px;
+    height: 20px;
+    background-color: white;
+    display: inline-block;
+    margin-right: 5px;
+    transition: 0.3s
+}
+
+.burger-line:last-of-type{
+    margin-right: 0;
+}
+
+@keyframes fadeInButton {
+    from {
+        visibility: hidden; 
+        opacity: 0;
+    }
+    to {
+        visibility: visible;
+        opacity: 1; 
+    }
+}
+
+@keyframes fadeOutButton {
+    from {
+        visibility: visible; 
+        opacity: 1; 
+    }
+    to {
+        visibility: hidden;
+        opacity: 0; 
+    }
+}
+
+@media (max-width: 570px) {
+    .button-container {
+        grid-template-columns: repeat(3, 37px); 
+    }
+}
+
+@media (max-width: 500px) {
+    .button-container {
+        grid-template-columns: repeat(2, 37px); 
+    }
+}
+
+@media (max-width: 400px) {
+    .button-container {
+        grid-template-columns: repeat(1, 37px); 
+    }
+}
+  

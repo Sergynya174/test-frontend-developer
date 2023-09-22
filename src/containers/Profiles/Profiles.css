@@ -1,0 +1,81 @@
+.profiles{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container{
+  width: 100%;
+  padding: 30px 50px;
+}
+
+.main{
+  margin-top: 30px;
+  max-width: 1246px;
+  width: 100%;
+  padding: 0 50px 15px;
+}
+
+.title-container{
+  width: 100%;
+   margin-bottom: 30px;
+}
+
+.title{
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.button{
+  color: rgba(38, 67, 84, 0.3);
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  transition: color 0.5s ease;
+}
+
+.button:hover{
+  color: #F37D7380;
+}
+
+.button-active{
+  color: rgba(38, 67, 84, 0.3);
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  transition: color 0.5s ease;
+}
+
+.profiles-fade-in {
+  animation: profiles-fade-in 1.7s forwards;
+}
+  
+.profiles-fade-out {
+  animation: profiles-fade-out 1.7s forwards;
+}
+  
+@keyframes profiles-fade-in {
+  0%{
+    opacity: 0;
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+  
+@keyframes profiles-fade-out {
+  0%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+}
